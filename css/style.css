@@ -1,3 +1,20 @@
+/* 
+        --MEDIA QUERY MANAGER--
+    0 - 600px:    phone
+    600 - 900:    tablet portrait
+    900 - 1200:   tablet landscape
+    1200 - 1800:  Standard desktop
+    1800 + :      Large desktop
+
+    $breakpoint argument choices
+        phone
+        tab-port (tablet portrait)
+        tab-land (tablet landscape)
+        big-desktop
+
+    1 em = 16px
+    em has been determined as the unit of choice for media queries
+*/
 /* COLORS */
 /* FONT */
 /* GRID */
@@ -51,6 +68,15 @@ html {
        (10px) / 16 = .625 
     */
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
