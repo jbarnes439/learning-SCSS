@@ -13,4 +13,5 @@ Natours project from Udemy's Advanced CSS and Sass course.
 - Valid, invalid, placeholder-shown, checked pseudo classes
 - Solid linear gradients
 - Sibling Selectors
+- Media Queries using mixins
 
