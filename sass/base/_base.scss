@@ -1,0 +1,50 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+    /* Makes it easier to change box-sizing for entire page */
+    box-sizing: inherit;    
+}
+
+html {
+    /* 
+       this code defines what 1 rem equates to:
+       By setting root font-size to 10px makes rem calculations
+       easier to determine. - common technique, bad practice
+       for users who enlarge browser font-size.
+
+       Instead, make root font size a calculation of your desired font-size (10 in our case)
+       divided by 16 (the browser root font-size) 
+       (10px) / 16 = .625 
+    */
+    font-size: 62.5%; // 1 rem = 10px: 10px/16px = 62.5%
+    
+    @include respond(tab-land) { // width < 1200?
+        font-size: 56.25%; // 1 rem = 9px: 9/16 = 56.25%
+    }
+
+    @include respond(tab-port) { // width < 900?
+        font-size: 50%; // 1 rem = 8px: 8/16 = 50%
+    }
+
+    @include respond(big-desktop) { // width > 1800?
+        font-size: 75%; // 1 rem = 12px: 12/16 = 75%
+    }
+}
+
+body {
+    box-sizing: border-box;
+    padding: 3rem;
+
+    @include respond(tab-port) { // width < 900?
+        padding: 0;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}

@@ -14,4 +14,7 @@ Natours project from Udemy's Advanced CSS and Sass course.
 - Solid linear gradients
 - Sibling Selectors
 - Media Queries using mixins
+- Supports queries
+- caniuse.com
+- selection pseudo class
 
